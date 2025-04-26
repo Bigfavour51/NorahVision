@@ -1,14 +1,9 @@
+// lib/main.dart
 import 'package:flutter/material.dart';
-import 'package:camera/camera.dart';
-import 'routes/app_routes.dart';
+import 'routes.dart'; // import routes.dart here
 
-late CameraDescription camera;
-
-Future<void> main() async {
-  WidgetsFlutterBinding.ensureInitialized();
-  final cameras = await availableCameras();
-  camera = cameras.first;
-  runApp(MyApp());
+void main() {
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -16,20 +11,18 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'NorahVision',
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData.dark().copyWith(
-        scaffoldBackgroundColor: const Color(0xFF1E1E1E),
-        appBarTheme: const AppBarTheme(
-          backgroundColor: Colors.black,
+      return MaterialApp(
+        debugShowCheckedModeBanner: false,
+        title: 'Face Recognition App',
+        theme: ThemeData.dark().copyWith(
+          scaffoldBackgroundColor: const Color(0xFF1E1E1E),
+          appBarTheme: const AppBarTheme(
+            backgroundColor: Colors.black,
+          ),
         ),
-      ),
-      initialRoute: '/',
-      routes: AppRoutes.routes(camera),
-    );
+        initialRoute: '/',            // Start from HomeScreen
+        routes: AppRoutes.getRoutes(), // 💥 Here's the linkage!
+      );
   }
 }
-
-
 

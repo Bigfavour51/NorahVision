@@ -53,7 +53,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:camera/camera.dart';
-import 'routes/routes_generator.dart';   // <--- NEW
+import 'routes/routes_generator.dart';   // Your routes generator file
+import 'screens/splash_screen.dart';   // Your splash screen file
 //import 'routes/routes.dart';             // Your existing routes file
 
 void main() async {
@@ -81,7 +82,7 @@ class MyApp extends StatelessWidget {
           backgroundColor: Colors.black,
         ),
       ),
-      initialRoute: '/',
+       home: const SplashScreen(),
       onGenerateRoute: RouteGenerator.generateRoute, // 💥 Now clean
     );
   }

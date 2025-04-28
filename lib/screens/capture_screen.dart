@@ -3,6 +3,10 @@ import 'package:camera/camera.dart';
 import 'package:flutter/foundation.dart';
 import 'package:path_provider/path_provider.dart';
 
+
+
+
+
 class CaptureScreen extends StatefulWidget {
   final CameraDescription camera;
   const CaptureScreen({super.key, required this.camera});
@@ -10,6 +14,8 @@ class CaptureScreen extends StatefulWidget {
   @override
   State<CaptureScreen> createState() => _CaptureScreenState();
 }
+
+
 
 class _CaptureScreenState extends State<CaptureScreen> {
   late CameraController _cameraController;

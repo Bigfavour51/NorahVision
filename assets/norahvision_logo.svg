@@ -1,0 +1,67 @@
+<svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Gradient Background -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e8f5fe" />
+      <stop offset="100%" stop-color="#d4e6ff" />
+    </linearGradient>
+    <linearGradient id="scanGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#4dabf5" stop-opacity="0" />
+      <stop offset="50%" stop-color="#4dabf5" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#4dabf5" stop-opacity="0" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Main circular background with subtle gradient -->
+  <circle cx="200" cy="200" r="180" fill="url(#bgGradient)" />
+  
+  <!-- Outer ring -->
+  <circle cx="200" cy="200" r="175" fill="none" stroke="#3d5afe" stroke-width="2" stroke-opacity="0.2" />
+  
+  <!-- Abstract facial recognition grid - more subtle and elegant -->
+  <g fill="none" stroke="#3d5afe" stroke-width="1.2" opacity="0.25">
+    <!-- Curved horizontal lines -->
+    <path d="M120,140 Q200,130 280,140" />
+    <path d="M100,170 Q200,160 300,170" />
+    <path d="M100,200 Q200,190 300,200" />
+    <path d="M100,230 Q200,240 300,230" />
+    <path d="M120,260 Q200,270 280,260" />
+    
+    <!-- Curved vertical lines -->
+    <path d="M140,120 Q130,200 140,280" />
+    <path d="M170,100 Q160,200 170,300" />
+    <path d="M200,100 Q200,200 200,300" />
+    <path d="M230,100 Q240,200 230,300" />
+    <path d="M260,120 Q270,200 260,280" />
+  </g>
+  
+  <!-- Modern face outline with smoother curves -->
+  <path d="M200,120 C245,120 275,155 275,210 C275,265 240,290 200,290 C160,290 125,265 125,210 C125,155 155,120 200,120Z" 
+        fill="none" stroke="#0033cc" stroke-width="2.5" stroke-opacity="0.8" />
+  
+  <!-- Stylized eye outlines -->
+  <path d="M170,180 C162,172 174,165 180,173 C186,180 178,188 170,180Z" fill="#0033cc" fill-opacity="0.7" />
+  <path d="M230,180 C222,172 234,165 240,173 C246,180 238,188 230,180Z" fill="#0033cc" fill-opacity="0.7" />
+  
+  <!-- Sleek security shield/lock element -->
+  <g transform="translate(200, 220)">
+    <path d="M0,-22 L-18,0 L0,22 L18,0 Z" fill="none" stroke="#0033cc" stroke-width="2" stroke-opacity="0.8" />
+    <circle cx="0" cy="5" r="6" fill="#0033cc" fill-opacity="0.8" />
+    <rect x="-1.5" y="-3" width="3" height="8" rx="1" fill="#d4e6ff" />
+  </g>
+  
+  <!-- Enhanced scan effect -->
+  <rect x="100" y="197" width="200" height="6" fill="url(#scanGradient)" rx="3">
+    <animate attributeName="y" values="140;260;140" dur="4s" repeatCount="indefinite" />
+  </rect>
+  
+  <!-- Circular focus points for visual interest -->
+  <circle cx="140" cy="175" r="3" fill="#0033cc" fill-opacity="0.3" />
+  <circle cx="260" cy="175" r="3" fill="#0033cc" fill-opacity="0.3" />
+  <circle cx="170" cy="230" r="2" fill="#0033cc" fill-opacity="0.3" />
+  <circle cx="230" cy="230" r="2" fill="#0033cc" fill-opacity="0.3" />
+  
+  <!-- Typography - Moved up to ensure it's inside the oval -->
+  <text x="200" y="315" fill="#0033cc" font-family="Arial, sans-serif" font-weight="bold" font-size="28" text-anchor="middle" letter-spacing="1">NorahVision</text>
+  <text x="200" y="340" fill="#3d5afe" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" letter-spacing="0.5" font-weight="300">Secure Facial Authentication</text>
+</svg>
